@@ -1,0 +1,31 @@
+.navbutton {
+    background-color: orange;
+    padding: 11px 25px;
+    width: 100px;
+    text-align: center;
+    display: inline-block;
+    position: relative; /*nav stacks on top of each other*/
+}
+
+.dropdown-box {
+    display: none; /*turns the dropdown off when not used*/
+    position: absolute; /*independent from one another*/
+    z-index: 1;
+    padding-top: 12px;
+    margin-left: -25px;
+}
+
+
+.navbutton:hover .dropdown-box {
+    display: block; /*turns the dropdown on when hover*/
+
+}
+
+.dropdown-box .navbutton {
+    background-color: bisque; /*change color on subnav*/
+}
+
+.dropdown-box .navbutton:hover {
+    background-color: yellow; /*change color on subnav*/
+    transition-duration: .75s;
+}
